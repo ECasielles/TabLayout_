@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icons">
+        <item>@drawable/access_point_network</item>
+        <item>@drawable/alert_box</item>
+        <item>@drawable/alpha</item>
+        <item>@drawable/ambulance</item>
+        <item>@drawable/apple_keyboard_option</item>
+    </array>
+</resources>

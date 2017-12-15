@@ -13,17 +13,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <!--No aparece theme en las opciones-->
+        <!--
+            No aparecen theme en las opciones.
+            Hay que tener invertidos los estilos theme y popuptheme.
+        -->
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             />
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabTextColor="@android:color/white"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
             />
     </android.support.design.widget.AppBarLayout>
 

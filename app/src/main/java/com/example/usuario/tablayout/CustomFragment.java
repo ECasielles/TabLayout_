@@ -16,7 +16,8 @@ public class CustomFragment extends Fragment {
 
     public static CustomFragment newInstance(Bundle arguments) {
         CustomFragment customFragment = new CustomFragment();
-        if (arguments != null) customFragment.setArguments(arguments);
+        if (arguments != null)
+            customFragment.setArguments(arguments);
         return customFragment;
     }
 

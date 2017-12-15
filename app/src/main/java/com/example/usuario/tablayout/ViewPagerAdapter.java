@@ -5,12 +5,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import java.util.ArrayList;
+
 class ViewPagerAdapter extends FragmentPagerAdapter {
     private int pageCount = 5;
+    private ArrayList<String> titles;
 
-    public ViewPagerAdapter(FragmentManager supporFragmentManager, int pageCount) {
+    public ViewPagerAdapter(FragmentManager supporFragmentManager, int pageCount, ArrayList<String> titles) {
         super(supporFragmentManager);
         this.pageCount = pageCount;
+        this.titles = titles;
     }
     public ViewPagerAdapter(FragmentManager supportFragmentManager) {
         super(supportFragmentManager);
@@ -48,6 +52,11 @@ class ViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return pageCount;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return super.getPageTitle(position);//return titles.get(position);
     }
 
 }
